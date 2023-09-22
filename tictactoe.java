@@ -71,6 +71,11 @@ public class tictactoe {
         while(checkWinner(board,turn)==null)
         {
             int a=sc.nextInt();
+	    if(a>9)
+            {
+                System.out.println("Invalid input; re-enter slot number:");
+                continue;
+            }
             if(board[a-1].equals("X")||board[a-1].equals("O"))
             {
                 System.out.println("Slot already taken; re-enter slot number:");
